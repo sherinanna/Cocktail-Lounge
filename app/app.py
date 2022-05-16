@@ -10,8 +10,10 @@ from flask_debugtoolbar import DebugToolbarExtension
 import requests
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///cocktail'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
+
 
 
 @app.route('/')
