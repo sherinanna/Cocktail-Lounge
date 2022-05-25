@@ -1,0 +1,11 @@
+<div class="row random-listing">
+  {% for drink in drinks %}
+  <div class="col-4">
+    <img class="img-thumbnail" src="{{ drink.strDrinkThumb }}" />
+    <p class="text-center img-name">
+      <a href="/cocktails/{{drink.idDrink}}">{{ drink.strDrink }}</a>
+    </p>
+  </div>
+
+  {% endfor %}
+</div>

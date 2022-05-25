@@ -1,0 +1,30 @@
+{% extends 'base.html'%} {% block content%} {% if not drinks %}
+<div class="container text-center display-4">No favorites yet!!</div>
+
+{% else %}
+
+<h1 class="mb-3">My Favorites</h1>
+
+<div class="row random-listing">
+  {% for drink in drinks %}
+  <div class="col-4">
+    <img class="img-thumbnail" src="{{ drink.strDrinkThumb }}" />
+    <div class="text-center img-name fav">
+      <a href="/cocktails/{{drink.idDrink}}">{{ drink.strDrink }}</a>
+
+      <form
+        action="/cocktails/{{drink.idDrink}}/favorite"
+        method="POST"
+        style="display: inline"
+      >
+        <button class="btn btn-sm btn-outline-danger btn-delete">
+          <span class="fas fa-trash"></span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+{% endif %} {% endblock %}

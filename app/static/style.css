@@ -1,0 +1,195 @@
+body {
+  background: #dbd8e3;
+  font-family: calibri;
+}
+h1 {
+  text-align: center;
+  color: black;
+}
+/*  gets rid of blue box when we clickon a button to type */
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.navbar-dark {
+  background: #352f44;
+}
+
+.navbar-logo {
+  color: whitesmoke;
+  padding: 5px;
+  margin-left: 15px;
+}
+.navbar-brand {
+  /* margin-left: 15px; */
+  align-items: center;
+}
+
+.nav-right {
+  position: absolute;
+  right: 15px;
+}
+
+.img-thumbnail {
+  border: 0;
+  padding: 0;
+  outline: none;
+  margin: 5px auto;
+  max-width: 80%;
+  max-height: 90%;
+  display: block;
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); */
+}
+
+.img-name {
+  font-size: larger;
+}
+
+.img-name a {
+  text-decoration: none;
+  color: #352f44;
+}
+
+.img-name a:hover {
+  font-weight: bold;
+}
+
+.search-form {
+  width: 60%;
+  margin: 0 auto;
+}
+.search-container {
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.search-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.search-container a:hover {
+  text-decoration: none;
+  color: grey;
+  font-weight: bold;
+}
+
+.icon {
+  position: absolute;
+  /* background-color: #5c5470; */
+  /* padding: 10px; */
+  right: 1px;
+}
+
+.form-group {
+  /* width: 80%; */
+  /* padding-right: 60px; */
+  /* padding-top: 10px; */
+
+  margin: 0 auto;
+}
+.advanced-search {
+  margin: 0 auto;
+  box-shadow: inset -2px -3px 22px rgba(0, 0, 0, 0.3);
+  border-radius: 5%;
+  max-width: 350px;
+}
+
+.advanced-search img {
+  height: 180px;
+  width: 100%;
+  padding: 10px;
+}
+
+.search-header {
+  color: #352f44;
+  padding: 10px;
+}
+
+.search-header:hover {
+  font-weight: bold;
+}
+.search-btn {
+  margin: 20px 0;
+}
+
+.advanced-search-field {
+  margin-top: 50px;
+  height: 55px;
+  color: #352f44;
+}
+
+.advanced-search-box ::placeholder {
+  color: #352f44;
+}
+.main {
+  margin-top: 40px;
+}
+.random-listing {
+  margin-bottom: 4em;
+}
+
+.hidden {
+  display: none;
+}
+
+.advanced-search-box {
+  margin: 20px 0;
+}
+
+.review-form {
+  padding: 2em;
+  text-align: center;
+  /* justify-content: center; */
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: grey;
+  border: 3px solid grey;
+  color: white;
+  text-align: center;
+  font: 20px Arial, sans-serif;
+  /* font: 32px Arial, sans-serif; */
+}
+
+footer {
+  text-align: center;
+  /* padding: 8px; */
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #5c5470;
+  color: cornsilk;
+  min-height: 30px;
+}
+
+.detail-page {
+  font-size: 18px;
+}
+
+.btn-delete {
+  float: right;
+}
+
+.random-listing .btn-delete {
+  margin: 0 auto;
+}
+
+/* mak ethe .fav style similar to the img-thumbnail class */
+.fav {
+  padding: 10px 0;
+  max-width: 80%;
+  box-shadow: inset 0px -8px 14px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 15px auto;
+}
+
+.fav .btn-delete {
+  position: absolute;
+  margin-left: 8px;
+}

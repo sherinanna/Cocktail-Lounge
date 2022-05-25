@@ -1,0 +1,71 @@
+{% extends 'base.html'%} {% block content%}
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-5 mt-4">
+      <div class="advanced-search">
+        <img
+          class="img-fluid rounded-top"
+          src="https://blackcdn.blacktailnyc.com/what-absinthe-based-cocktail-did-hemingway-create-.jpg"
+          alt="Ingredient search"
+        />
+        <div class="text-center">
+          <button
+            class="btn btn-block btn-lg search-header"
+            id="search-ingredient"
+          >
+            Search by Ingredient
+          </button>
+        </div>
+      </div>
+      <div class="advanced-search-box hidden" id="form-ingredient">
+        <form method="POST" action="/search/ingredient" class="form-group">
+          {{ form_i.hidden_tag() }} {% for field in form_i if
+          field.widget.input_type != 'hidden' %}
+          <div class="form-group">
+            {% for error in field.errors %}
+            <span class="text-danger">{{ error }}</span>
+            {% endfor %} {{ field(placeholder="Enter an ingredient",
+            class="form-control advanced-search-field") }} {% endfor %}
+          </div>
+
+          <div class="search-btn text-center">
+            <button class="btn btn-sm btn-block btn-dark">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5 mt-4">
+      <div class="advanced-search">
+        <img
+          class="img-fluid rounded-top"
+          src="https://hmhub.in/wp-content/uploads/2018/01/rsz_eclipsecocktails1.jpg"
+          alt="category search"
+        />
+
+        <div class="text-center">
+          <button
+            class="btn btn-block btn-lg search-header"
+            id="search-category"
+          >
+            Search by Category
+          </button>
+        </div>
+      </div>
+      <div class="advanced-search-box hidden" id="form-category">
+        <form method="POST" action="/search/category" class="form-group">
+          {{ form.hidden_tag() }} {% for field in form if
+          field.widget.input_type != 'hidden' %} {% for error in field.errors %}
+          <span class="text-danger">{{ error }}</span>
+          {% endfor %} {{ field(placeholder= field.label.text,
+          class="form-control advanced-search-field") }} {% endfor %}
+
+          <div class="search-btn text-center">
+            <button class="btn btn-sm btn-block btn-dark">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

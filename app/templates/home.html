@@ -1,0 +1,28 @@
+{% extends 'base.html'%} {% block content%}
+
+<div class="container">
+  <div class="container search-container">
+    <h1>Find a Cocktail</h1>
+
+    <form method="POST" action="/search/name">
+      <div class="search-form input-group">
+        {% include "_form.html" %}
+
+        <button class="btn btn-secondary icon">
+          <span class="fa fa-search"></span>
+        </button>
+      </div>
+    </form>
+    <br />
+    <a href="/search">
+      <small>ADVANCED SEARCH <i class="fa-solid fa-angles-right"></i> </small>
+    </a>
+  </div>
+
+  <div class="container main">
+    <h1 class="mb-3">Mixed Bag</h1>
+
+    {% include "_drinks.html" %}
+  </div>
+</div>
+{% endblock %}
