@@ -4,11 +4,11 @@ import requests
 class Cocktail():
     
     def get_random_cocktails(self):
-        """get a random collection of 12 cocktails to display in the homepage"""
+        """get a random collection of 9 cocktails to display in the homepage"""
         
         collection=[]
         keys=['idDrink','strDrink','strDrinkThumb']
-        while len(collection)<6:
+        while len(collection)<9:
             response=requests.get('http://www.thecocktaildb.com/api/json/v1/1/random.php')
             drink=response.json()['drinks'][0]
             

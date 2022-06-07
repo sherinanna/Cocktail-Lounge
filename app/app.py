@@ -7,7 +7,7 @@
 # pip install flask-bcrypt
 
 import pdb
-from unicodedata import category
+import os
 from flask import Flask, flash,render_template, request,redirect,session,g
 from flask_debugtoolbar import DebugToolbarExtension
 from sqlalchemy.exc import IntegrityError
@@ -18,7 +18,10 @@ from cocktails import Cocktail
 cocktail=Cocktail()
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///cocktail'
+# Get DB_URI from environ variable (useful for production/testing) or,
+# if not set there, use development local db.
+app.config['SQLALCHEMY_DATABASE_URI'] = (os.environ.get('DATABASE_URL', 'postgresql:///cocktail'))
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SECRET_KEY'] = "secret123"
@@ -164,7 +167,6 @@ def search_by_ingredient():
     form=SearchForm()
     if form.validate_on_submit():
         term = form.term.data
-        print("############",term)
         drinks=cocktail.search_by_ingredient(term)
         return render_template("show_cocktails.html", drinks=drinks, term=term)
        
