@@ -24,7 +24,9 @@ The API provides cocktail information by name, ingredients, alcohol level and ev
 The schema consist of following three tables:
 
 **Users** : id, username, password,age,first_name, last_name
+
 **Reviews** : id, title, description,user_id, cocktail_id
+
 **Favorites** : id,user_id,cocktail_id
 
 ![This is an image](/DatabaseDiagram%20.png)
