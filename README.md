@@ -1,6 +1,10 @@
-# Capstone1
+# The Cocktail-Lounge App
 
-Goal:
+https://cocktail-lounge-capstone.herokuapp.com/
+
+![This is an image](/capstone1.png)
+
+##Goal:
 A go-to website to search for cocktails, get recipes, curate a list of favorites and much more.
 
 Users: 
