@@ -39,6 +39,30 @@ To further access the app,each user will need to sign up and login. Only adults 
 
 Users have the option to favorite drinks which gets saved to the user account and post reviews if interested. 
 
+## How to run the app
+You will need to install Python3 and set up a postgress database. Then follow the below steps to run the code successfully:
+
+Create the python virtual environment
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+```
+Install required packages
+```
+(venv) $ pip install -r requirements.txt
+```
+
+Setup the database
+```
+(venv) $ createdb cocktail
+(venv) $ python seed.py
+```
+
+Start the server
+```
+(venv) $ flask run
+```
+
 ## Testing
 Integration testing has been implemented using the unittest module in Python. There are four test files included:two for testing the model, one for testing the routes and one to test additional logic.
 
