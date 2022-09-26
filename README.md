@@ -66,4 +66,4 @@ Start the server
 ## Testing
 Integration testing has been implemented using the unittest module in Python. There are four test files included:two for testing the model, one for testing the routes and one to test additional logic.
 
-To run a file containing unittests, you can run the command **FLASK_ENV=production python -m unittest name-of-python-file **
+To run a file containing unittests, you can run the command **FLASK_ENV=production python -m unittest name-of-python-file**
